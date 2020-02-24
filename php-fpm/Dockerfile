@@ -6,5 +6,5 @@ COPY ./code/index.php /code/
 
 WORKDIR /code
 
-CMD [ "php-fpm"]
+CMD [ "php-fpm" ]
 

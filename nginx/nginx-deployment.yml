@@ -1,22 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php
+  name: nginx
   labels:
     tier: backend
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: php
+      app: nginx
       tier: backend
   template:
     metadata:
       labels:
-        app: php
+        app: nginx
         tier: backend
     spec:
       containers:
-      - name: php
-        image: webmaks/hphp-fpm
+      - name: nginx
+        image: webmaks/hnginx:v5
+        ports:
+        - containerPort: 80
+
+
+
 
