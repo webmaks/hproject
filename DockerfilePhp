@@ -1,6 +1,6 @@
 ####### Instruction ########
 # cd php-fpm
-# docker build -f ../DockerfilePhp
+# docker build -f DockerfilePhp .
 ############################
 FROM php:7.4.3-fpm-alpine3.11
 

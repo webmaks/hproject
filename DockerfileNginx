@@ -1,14 +1,14 @@
 ####### Instruction ########
 # cd nginx
-# docker build -f ../DockerfileNginx
+# docker build -f DockerfileNginx .
 ############################
 
 FROM nginx:1.17.8-alpine
 
 RUN mkdir /code
-RUN chown nginx /code
+#RUN chown nginx /code
 WORKDIR /code
-COPY nginx.conf /etc/nginx/
+COPY ./nginx/nginx.conf /etc/nginx/
 COPY ./code /code
 CMD [ "nginx", "-g", "daemon off;" ]
 
