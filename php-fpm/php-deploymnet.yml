@@ -18,5 +18,21 @@ spec:
     spec:
       containers:
       - name: php
-        image: webmaks/hphp-fpm:v1
+        image: webmaks/hphp-fpm:v2
+        env:
+        - name: "dbname"
+          valueFrom:
+            secretKeyRef:
+              name: dbname
+              key: dbname
+        - name: "dbuser"
+          valueFrom:
+            secretKeyRef:
+              name: dbuser
+              key: dbuser
+        - name: "dbpass"
+          valueFrom:
+            secretKeyRef:
+              name: dbpass
+              key: dbpass
 

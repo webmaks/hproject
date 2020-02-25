@@ -1,7 +1,7 @@
 <?php
-$servername = "db";
-$username = "test";
-$password = "test";
+$servername =   getenv("dbname");
+$username =     getenv("dbuser");
+$password =     getenv("dbpass");
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=test", $username, $password);

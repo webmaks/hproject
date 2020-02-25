@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: webmaks/hnginx:v1
+        image: webmaks/hnginx:v2
         ports:
         - containerPort: 80
 
