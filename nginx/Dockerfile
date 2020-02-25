@@ -4,7 +4,7 @@ RUN mkdir /code
 RUN chown nginx /code
 WORKDIR /code
 COPY nginx.conf /etc/nginx/
-COPY code/index.php /code/
+COPY ../code/index.php /code/
 CMD [ "nginx", "-g", "daemon off;" ]
 #CMD [ "nginx" ]
 
