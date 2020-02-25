@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: php
-        image: webmaks/hphp-fpm:v2
+        image: webmaks/hphp-fpm:v3
         env:
         - name: "dbname"
           valueFrom:
