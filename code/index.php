@@ -1,5 +1,7 @@
 <?php
 
+header('Content-Type: application/json');
+
 $servername =   preg_replace('/\s+/', '', getenv("dbname"));
 $username =     preg_replace('/\s+/', '', getenv("dbuser"));
 $password =     preg_replace('/\s+/', '', getenv("dbpass"));
