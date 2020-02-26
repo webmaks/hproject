@@ -1,0 +1,12 @@
+build:
+  image: docker:19.03.1
+  stage: build
+  services:
+    - docker:19.03.1-dind
+  script:
+    - docker build -t webmaks/hnginx:latest -f DockerfileNginx .
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD  
+    - docker push webmaks/hnginx:latest
+    - docker build -t webmaks/hphp-fpm:latest -f DockerfilePhp .
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker push webmaks/hphp-fpm:latest

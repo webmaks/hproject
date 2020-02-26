@@ -6,6 +6,9 @@ $servername =   preg_replace('/\s+/', '', getenv("dbname"));
 $username =     preg_replace('/\s+/', '', getenv("dbuser"));
 $password =     preg_replace('/\s+/', '', getenv("dbpass"));
 
+echo "Hello, world!!!\r\n";
+
+
 try {
     $conn = new PDO("mysql:host=$servername;dbname=test", $username, $password);
     // set the PDO error mode to exception

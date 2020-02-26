@@ -1,2 +1,3 @@
 # hproject
-php-fpm + nginx in kuber
+php-fpm + nginx in kubernates
+
